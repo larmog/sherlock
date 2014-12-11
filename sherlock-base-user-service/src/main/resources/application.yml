@@ -1,0 +1,12 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: sherlock-base-user-service
+  jpa:
+    show-sql: true
+    generate-ddl: true
+eureka:
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}

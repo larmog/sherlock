@@ -1,0 +1,9 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: sherlock-eureka-client
+eureka:
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
