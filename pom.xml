@@ -11,19 +11,18 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <spring.boot.version>1.1.9.RELEASE</spring.boot.version>
+    <spring.boot.version>1.2.0.RELEASE</spring.boot.version>
     <spring.cloud.version>1.0.0.M3</spring.cloud.version>
   </properties>
 
   <modules>
     <module>sherlock-config-server</module>
-    <!--
-    <module>sherlock-config-client</module>
-    -->
     <module>sherlock-eureka-server</module>
     <module>sherlock-eureka-client</module>
     <module>sherlock-base-user-service</module>
-    <module>sherlock-hysterix</module>
+    <module>sherlock-hystrix</module>
+    <module>sherlock-web</module>
+    <module>sherlock-api</module>
   </modules>
 
   <dependencyManagement>

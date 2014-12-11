@@ -20,12 +20,12 @@ import java.util.*;
 @RestController
 @ComponentScan
 @EnableHystrixDashboard
-public class SherlockHysterix {
+public class SherlockHystrix {
     @Autowired
     private UserIntegration userIntegration;
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(SherlockHysterix.class).web(true).run(args);
+        new SpringApplicationBuilder(SherlockHystrix.class).web(true).run(args);
     }
 
     @RequestMapping("/users")
