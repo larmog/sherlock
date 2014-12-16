@@ -1,4 +1,4 @@
-package sherlock.web;
+package sherlock.auth.server;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

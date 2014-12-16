@@ -1,0 +1,28 @@
+server:
+  port: 8080
+security:
+  user:
+    password: user
+  ignored: /,/favicon.ico,/foo/**
+zuul:
+  routes:
+    foo:
+      url: http://localhost:7000/uaa
+auth:
+  routes:
+    foo: oauth2  
+oauth2:
+  client:
+    tokenUri: http://localhost:7000/uaa/oauth/token
+    authorizationUri: http://localhost:7000/uaa/oauth/authorize
+    clientId: acme
+    clientSecret: acmesecret
+  resource:
+    jwt:
+      keyUri: http://localhost:7000/uaa/oauth/token_key
+    id: openid
+    serviceId: ${PREFIX:}resource
+logging:
+  level:
+    org.springframework.security: DEBUG
+    com.netflix.discovery: 'OFF'
